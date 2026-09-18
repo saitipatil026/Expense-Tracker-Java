@@ -526,3 +526,33 @@ A small helper wrapping `fetch` to auto-attach the token and redirect to login o
 4. Create expense form.
 5. Edit + delete.
 6. Summary/dashboard view last, once create/list are solid — it's just another `GET` but the data shaping (totals by category) is easiest to sanity-check once you already have real expenses to look at.
+
+## EXPENSE TRACKER FRONTEND 
+## Frontend Implementation (Aarti Mane)
+
+### How to Run Frontend
+1. Open `index.html` with Live Server
+2. Backend must be running on `http://localhost:8080`
+3. Update `BASE_URL` in `app.js` if port changes
+
+### Features Implemented
+- Login and Register pages with token storage
+- Dashboard to display all expenses
+- Add, Edit and Delete expense
+- Responsive UI for mobile and desktop
+
+### API Connection
+Used Fetch API with Authorization header:
+```js
+Authorization: Bearer ${token}
+Error Handling
+400: Show validation error401: Redirect to login page404: Show "Expense not found"500: Show "Something went wrong"Helper Function Usedjsasync function authFetch(url, options = {}) {
+  const token = localStorage.getItem("token");
+  options.headers = { ...options.headers, Authorization: `Bearer ${token}` };
+  const res = await fetch(url, options);
+  if (res.status === 401) {
+    localStorage.removeItem("token");
+    window.location.href = "/login.html";
+  }
+  return res;
+}
