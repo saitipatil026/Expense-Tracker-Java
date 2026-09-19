@@ -1,0 +1,26 @@
+# Secrets - never commit
+.env
+
+# SQLite database file - local data, never commit
+*.db
+*.sqlite
+*.sqlite3
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
