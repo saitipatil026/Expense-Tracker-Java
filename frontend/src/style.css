@@ -1,0 +1,14 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: #f4f6f9; display: flex; justify-content: center; padding: 20px; }
+#app { width: 100%; max-width: 450px; }
+.finance-card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+h1, h2, h3 { text-align: center; margin-bottom: 15px; }
+input, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 8px; }
+button { width: 100%; padding: 12px; background: #6c5ce7; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 8px; }
+button.secondary { background: #636e72; }
+.link { text-align: center; margin-top: 10px; color: #6c5ce7; cursor: pointer; }
+.hidden { display: none !important; }
+#expenseList { list-style: none; margin-top: 15px; }
+#expenseList li { display: flex; justify-content: space-between; padding: 10px; background: #f8f9fa; margin-bottom: 8px; border-radius: 8px; }
+.summary-box { background: #f1f2f6; padding: 12px; border-radius: 8px; margin: 12px 0; text-align: center; }
+#authMsg { text-align: center; color: red; margin-top: 10px; min-height: 20px;}
